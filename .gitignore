@@ -1,0 +1,14 @@
+# Ignore all files by default
+*
+
+# Do not ignore directories (otherwise we can't get into them to find Java files)
+!*/
+
+# Allow only .java files
+!*.java
+
+# Allow the .gitignore file itself
+!.gitignore
+
+# Allow the README.md file required by the lab 
+!README.md
