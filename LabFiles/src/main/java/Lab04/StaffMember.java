@@ -5,11 +5,13 @@ public abstract class StaffMember {
     private String staffId;
     protected String department;
     
+    private static int staffCount = 0;
+    
     public StaffMember(String Name, String ID, String Department){
     this.fullName = Name;
     this.staffId = ID;
     this.department = Department;
-    
+    staffCount++;
     }
     
     public String ShowName(){
@@ -30,6 +32,14 @@ public abstract class StaffMember {
     }
     
     public abstract double calculateMonthlyPayment();
+    
+    public static void showSystemName(){
+        System.out.println("Campus Staff Payment System");
+    }
+    
+    public static int getStaffCount(){
+        return staffCount;
+    }
 }
 /* Comment: 
     StaffMember is abstract because it represents a general concept. 
