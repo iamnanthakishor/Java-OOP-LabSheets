@@ -46,3 +46,8 @@ public abstract class StaffMember {
     We cannot calculate a payment without knowing if the member is a 
     Lecturer or a LabAssistant.
 */
+
+/*
+staffCount is static because it is shared among all objects 
+and counts total staff members.
+*/
