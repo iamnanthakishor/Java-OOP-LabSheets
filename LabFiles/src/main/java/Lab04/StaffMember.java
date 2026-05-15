@@ -40,6 +40,15 @@ public abstract class StaffMember {
     public static int getStaffCount(){
         return staffCount;
     }
+    
+    public void changeDepartment(String newDepartment){
+        if (newDepartment != null && !newDepartment.isEmpty()) {
+            this.department = newDepartment;}
+    }
+    
+    public final void showCommonNotice() {
+    System.out.println("All staff must follow university regulations.");
+}
 }
 /* Comment: 
     StaffMember is abstract because it represents a general concept. 
@@ -50,4 +59,9 @@ public abstract class StaffMember {
 /*
 staffCount is static because it is shared among all objects 
 and counts total staff members.
+*/
+
+/*
+changeDepartment is useful because it controls updates 
+instead of allowing direct modification of data.
 */
