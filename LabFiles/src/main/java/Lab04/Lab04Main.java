@@ -12,6 +12,7 @@ public class Lab04Main {
         Lab1.displayLabAssistantDetails();
         System.out.println("Monthly Payment: " + Lab1.calculateMonthlyPayment());
         
+        UniversityPolicy.showPolicyHeader();
     }
 }
 // Comment: department can be used here because it is protected in the parent class
