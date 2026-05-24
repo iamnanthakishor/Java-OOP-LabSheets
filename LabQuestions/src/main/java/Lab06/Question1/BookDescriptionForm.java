@@ -3,11 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Lab06.Question1;
-
-/**
- *
- * @author admin
- */
 public class BookDescriptionForm extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(BookDescriptionForm.class.getName());
@@ -32,7 +27,7 @@ public class BookDescriptionForm extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        showButton = new javax.swing.JButton();
         titleTextField = new javax.swing.JTextField();
         authorTextField = new javax.swing.JTextField();
         pagesTextField = new javax.swing.JTextField();
@@ -54,9 +49,9 @@ public class BookDescriptionForm extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("Pages:");
 
-        jButton1.setText("Get Details");
-        jButton1.setToolTipText("Click to get details");
-        jButton1.addActionListener(this::jButton1ActionPerformed);
+        showButton.setText("Get Details");
+        showButton.setToolTipText("Click to get details");
+        showButton.addActionListener(this::showButtonActionPerformed);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Output:");
@@ -78,7 +73,7 @@ public class BookDescriptionForm extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(showButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -113,7 +108,7 @@ public class BookDescriptionForm extends javax.swing.JFrame {
                     .addComponent(pagesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(showButton)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
@@ -124,8 +119,8 @@ public class BookDescriptionForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+    private void showButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showButtonActionPerformed
+ // TODO add your handling code here:
         String title  =titleTextField.getText();
         String author =authorTextField.getText();
         int pages =Integer.parseInt(pagesTextField.getText());
@@ -133,7 +128,7 @@ public class BookDescriptionForm extends javax.swing.JFrame {
         Book book = new Book(title, author, pages);
         outputTextArea.setText(
         "Book Title: " + book.getTitle() + "\n" + "Author: " + book.getAuthor() + "\n" + "Pages: " + book.getPages() + "\n" + "Book Type: " + book.getBookType());
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_showButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,7 +157,6 @@ public class BookDescriptionForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField authorTextField;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -171,6 +165,7 @@ public class BookDescriptionForm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea outputTextArea;
     private javax.swing.JTextField pagesTextField;
+    private javax.swing.JButton showButton;
     private javax.swing.JTextField titleTextField;
     // End of variables declaration//GEN-END:variables
 }
